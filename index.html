@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NABILA OF THE KINGDOM - 3D Cultivation & Strategy</title>
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+    <div id="canvas-container"></div>
+
+    <!-- UI LAYER UTAMA -->
+    <div id="ui-layer">
+        <header class="panel interactive">
+            <div class="title-container">
+                <h1>👑 NABILA OF THE KINGDOM 👑</h1>
+                <span id="sound-toggle" onclick="toggleAudio()" title="Matikan/Hidupkan Suara">🔊 Audio: ON</span>
+            </div>
+            <div class="resource-bar">
+                <div class="res-item">💎 Batu Spiritual: <span id="res-spirit">200</span></div>
+                <div class="res-item">🪵 Material: <span id="res-material">400</span></div>
+                <div class="res-item">⚔️ Prajurit/Sekte: <span id="res-troops">60</span></div>
+                <div class="res-item">🔮 Energi Qi: <span id="res-qi">0</span></div>
+                <div class="res-item">🗡️ Senjata: <span id="res-weapon">Pedang Kayu Roh</span></div>
+            </div>
+        </header>
+
+        <!-- PANEL KONTROL KULTIVASI & PASUKAN -->
+        <div id="controls-panel" class="panel interactive">
+            <h3>⚡ Sistem Kultivasi & Perekrutan</h3>
+            <p>Level Nabila: <span id="nabila-level">Qi Condensation (Tier 1)</span></p>
+            <button onclick="cultivateQi()">Meditasi (Serap Energi Qi)</button>
+            <button onclick="recruitTroops()">Rekrut Pasukan Sekte (50 💎)</button>
+            <button onclick="upgradeWeapon()">Upgrade Senjata (150 💎)</button>
+            <button onclick="buildAsset()">Bangun Menara Sekte (100 🪵)</button>
+        </div>
+
+        <!-- PANEL MISI & PERTEMPURAN -->
+        <div id="quest-panel" class="panel interactive">
+            <h3>📜 Penaklukan & Wilayah</h3>
+            <p id="quest-desc">Wilayah: Domain Sekte Kegelapan</p>
+            <button onclick="conquerTerritory()">⚔️ Serbu & Taklukkan Wilayah</button>
+            <button onclick="claimResource()">🎁 Klaim Upeti Wilayah</button>
+        </div>
+
+        <!-- PANEL INVENTORY & HERO -->
+        <div id="inventory-panel" class="panel interactive">
+            <h3>🎒 Inventory & Hero Sekte</h3>
+            <div id="hero-list">
+                - Nabila (Ratu Gelap, Rambut Pink)<br>
+                - Penasihat Sekte (Level 1)<br>
+                - Jenderal Bayangan (Level 1)
+            </div>
+            <div id="item-list" style="margin-top:8px; font-size:12px; color:#ff99cc;">
+                Item: Pil Penyembuh (x5), Jimat Qi (x3), Inti Monster (x2)
+            </div>
+        </div>
+
+        <!-- LOG AKTIVITAS -->
+        <div id="log-panel" class="panel interactive">
+            <div id="log-box">[Sistem] Ratu Nabila telah bangkit. Pimpin sekte dan taklukkan dunia kultivasi!</div>
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
